@@ -1,0 +1,180 @@
+<!doctype html>
+<html lang="ca">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Workshop d'intel·ligència artificial del projecte DAM 1.">
+  <title>Intel·ligència artificial · DAM 1</title>
+
+  <link rel="icon" type="image/svg+xml" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'%3E%3Crect width='64' height='64' rx='8' fill='%23ffffff'/%3E%3Cpath d='M17 19h14c10 0 16 5 16 13S41 45 31 45H17V19Zm10 7v12h4c5 0 8-2 8-6s-3-6-8-6h-4Z' fill='%233f73a4'/%3E%3C/svg%3E">
+  <link rel="stylesheet" href="../assets/css/base.css">
+  <link rel="stylesheet" href="../assets/css/navigation.css">
+  <link rel="stylesheet" href="../assets/css/workshops.css">
+  <link rel="stylesheet" href="../assets/css/responsive.css">
+  <script src="../assets/js/main.js" defer></script>
+</head>
+<body>
+  <!-- Capçalera compartida per totes les pàgines. -->
+  <header class="site-header">
+    <a class="brand" href="../index.html" aria-label="Anar a l'inici">
+      <span class="brand-mark">DAM 1</span>
+      <span>Digitalització aplicada</span>
+    </a>
+
+    <button class="menu-button" type="button" aria-expanded="false" aria-controls="main-nav">
+      <span></span><span></span><span></span>
+      <span class="sr-only">Obrir el menú</span>
+    </button>
+
+    <nav class="main-nav" id="main-nav" aria-label="Navegació principal">
+      <a href="../index.html">Inici</a>
+      <a href="../index.html#equip">Equip</a>
+      <div class="nav-dropdown">
+        <button class="dropdown-toggle" type="button" aria-expanded="false">
+          Workshops <span aria-hidden="true">⌄</span>
+        </button>
+        <div class="dropdown-menu">
+          <a href="sistemes-operatius.html"><span>01</span>Sistemes operatius</a>
+          <a href="control-versions.html"><span>02</span>Control de versions</a>
+          <a href="programacio.html"><span>03</span>Programació</a>
+          <a href="base-dades.html"><span>04</span>Bases de dades</a>
+          <a href="disseny-interficies.html"><span>05</span>Disseny d'interfícies</a>
+          <a class="active" href="ia.html"><span>06</span>Intel·ligència artificial</a>
+          <a href="ti-iot.html"><span>07</span>TI / IoT</a>
+          <a href="conclusions.html"><span>08</span>Conclusions</a>
+        </div>
+      </div>
+    </nav>
+  </header>
+
+  <main>
+    <section class="workshop-hero">
+      <div class="breadcrumbs">
+        <a href="../index.html">Inici</a><span>/</span>
+        <a href="../index.html#workshops">Workshops</a><span>/</span>
+        <span>Intel·ligència artificial</span>
+      </div>
+
+      <div class="workshop-title">
+        <div>
+          <p class="eyebrow">Tecnologia i innovació</p>
+          <h1>Intel·ligència artificial</h1>
+        </div>
+        <span class="workshop-index">Workshop 06</span>
+      </div>
+    </section>
+
+    <div class="workshop-layout">
+      <aside class="side-index">
+        <p>Contingut</p>
+        <a href="#resum">Resum</a>
+        <a href="#aprenentatges">Què hem après</a>
+        <a href="#activitats">Activitats</a>
+        <a href="#captures">Captures</a>
+      </aside>
+
+      <!-- Resum i aprenentatges apareixen junts; activitats ocupa tota l'amplada. -->
+      <article class="workshop-content">
+        <section class="content-section" id="resum">
+          <p class="section-label">Resum</p>
+          <h2>De què va tractar el workshop</h2>
+          <p class="lead">Vam experimentar amb eines d'intel·ligència artificial generativa aplicades a la programació. Les activitats tractaven els tokens, el disseny de prompts, les skills de revisió de codi, els agents amb n8n, els models entrenats i locals, i l'ús responsable de la IA.</p>
+        </section>
+
+        <section class="content-section" id="aprenentatges">
+          <p class="section-label">Aprenentatges</p>
+          <h2>Què hem après</h2>
+          <ul class="content-list">
+            <li>La tokenització varia segons el model, l'idioma i els caràcters utilitzats.</li>
+            <li>Un prompt estructurat redueix les iteracions i dona més control sobre el resultat.</li>
+            <li>Una skill permet repetir criteris de treball, com ara una revisió de codi coherent.</li>
+            <li>Un agent connecta una entrada, un model d'IA i una sortida dins d'un flux automatitzat.</li>
+            <li>Cal revisar les respostes, detectar biaixos i al·lucinacions i aplicar guardrails.</li>
+          </ul>
+        </section>
+
+        <section class="content-section" id="activitats">
+          <p class="section-label">Activitats</p>
+          <h2>Proves i resultats</h2>
+          <div class="table-wrap">
+            <table class="content-table">
+              <thead><tr><th>Activitat</th><th>Resultat o resposta</th></tr></thead>
+              <tbody>
+                <tr>
+                  <td>1. Anàlisi de tokens</td>
+                  <td>Vam comparar dos prompts sobre estrelles i llenguatges compilats o interpretats amb GPT-4o, Qwen i Llama, primer en anglès i després en altres idiomes. En general, l'anglès va consumir menys tokens. En una de les proves amb Llama, el mateix prompt va passar de 24 tokens en anglès a 30 en castellà i 53 en japonès. També vam observar que els accents i alguns signes poden modificar el recompte.</td>
+                </tr>
+                <tr>
+                  <td>2. Vibe coding i RASCEF</td>
+                  <td>Havíem de generar un formulari de contacte amb validació i missatge de confirmació. Amb vibe coding van caldre sis iteracions; amb un prompt RASCEF, només una. No vam arribar al límit de tokens. El vibe coding va ser més ràpid per començar, però el resultat necessitava més correccions; RASCEF exigia més preparació, però oferia més control.</td>
+                </tr>
+                <tr>
+                  <td>3. Skill de revisió de codi</td>
+                  <td>La skill havia de revisar noms de variables i funcions, mida de les funcions, errors, comentaris, duplicacions i convencions. La sortida es dividia en problemes crítics, millores i estil, sense canviar la lògica de negoci sense avisar. Vam comprovar que l'assistent podia activar-la automàticament quan el tema del xat era semblant.</td>
+                </tr>
+                <tr>
+                  <td>4. Miniagent amb n8n</td>
+                  <td>El flux proposat era <code>Form Trigger → AI Agent → Form completion</code>. El formulari rep el codi, l'agent aplica la skill i el node final mostra o desa la revisió. La pestanya d'execucions permet observar què entra i què surt de cada node. <strong>Pendent:</strong> afegir les captures i les respostes finals.</td>
+                </tr>
+                <tr>
+                  <td>5. Model de text a Colab</td>
+                  <td>L'activitat consistia a entrenar un classificador positiu/negatiu, provar cinc frases noves i analitzar almenys un resultat incorrecte o amb una confiança propera al 50 %. <strong>Pendent:</strong> incorporar els resultats del notebook.</td>
+                </tr>
+                <tr>
+                  <td>6. Model local amb Isard</td>
+                  <td>S'havia d'instal·lar Ollama o LM Studio en un escriptori virtual, executar un model petit i comparar tres respostes amb un model al núvol en velocitat, qualitat i facilitat d'ús. <strong>Pendent:</strong> afegir la comparació i les captures.</td>
+                </tr>
+                <tr>
+                  <td>7. Reglament Europeu d'IA</td>
+                  <td>La proposta era resumir l'enfocament basat en el risc, els nivells de risc, els terminis i les obligacions de les empreses en una infografia o presentació generada amb una eina visual d'IA. <strong>Pendent:</strong> afegir el material visual final.</td>
+                </tr>
+              </tbody>
+            </table>
+          </div>
+        </section>
+
+        <!-- GALERIA: substitueix cada placeholder per una etiqueta <img>. -->
+        <section class="content-section" id="captures">
+          <p class="section-label">Contingut gràfic</p>
+          <h2>Captures de les activitats</h2>
+          <p class="capture-intro">
+            Afegiu aquí captures del procés, dels resultats o de les eines utilitzades.
+            Guardeu les imatges a <code>assets/img</code> i canvieu cada placeholder per
+            una etiqueta <code>&lt;img&gt;</code>.
+          </p>
+
+          <div class="capture-grid">
+            <figure class="capture-item">
+              <!-- Substituïu aquest bloc per una imatge ubicada a assets/img/captura-1.png. -->
+              <div class="capture-placeholder"><span>Tokenització</span></div>
+              <figcaption>Comparació dels tokens segons el model i l'idioma.</figcaption>
+            </figure>
+
+            <figure class="capture-item">
+              <!-- Substituïu aquest bloc per una imatge ubicada a assets/img/captura-2.png. -->
+              <div class="capture-placeholder"><span>Formulari generat</span></div>
+              <figcaption>Resultat del formulari creat amb vibe coding o RASCEF.</figcaption>
+            </figure>
+
+            <figure class="capture-item">
+              <!-- Substituïu aquest bloc per una imatge ubicada a assets/img/captura-3.png. -->
+              <div class="capture-placeholder"><span>Agent o model</span></div>
+              <figcaption>Workflow d'n8n, revisió de codi o prova d'un model.</figcaption>
+            </figure>
+          </div>
+        </section>
+
+        <nav class="page-navigation" aria-label="Navegació entre workshops">
+          <a href="disseny-interficies.html"><span>Anterior</span><strong>← Disseny d'interfícies</strong></a>
+          <a href="ti-iot.html"><span>Següent</span><strong>TI / IoT →</strong></a>
+        </nav>
+      </article>
+    </div>
+  </main>
+
+  <footer class="site-footer">
+    <p>DAM 1 · Digitalització aplicada</p>
+    <p>Estructura generada amb IA · Contingut elaborat per humans</p>
+  </footer>
+</body>
+</html>

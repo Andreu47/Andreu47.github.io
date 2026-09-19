@@ -1,0 +1,182 @@
+<!doctype html>
+<html lang="ca">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Workshop de TI i Internet de les coses del projecte DAM 1.">
+  <title>TI / IoT · DAM 1</title>
+
+  <link rel="icon" type="image/svg+xml" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'%3E%3Crect width='64' height='64' rx='8' fill='%23ffffff'/%3E%3Cpath d='M17 19h14c10 0 16 5 16 13S41 45 31 45H17V19Zm10 7v12h4c5 0 8-2 8-6s-3-6-8-6h-4Z' fill='%233f73a4'/%3E%3C/svg%3E">
+  <link rel="stylesheet" href="../assets/css/base.css">
+  <link rel="stylesheet" href="../assets/css/navigation.css">
+  <link rel="stylesheet" href="../assets/css/workshops.css">
+  <link rel="stylesheet" href="../assets/css/responsive.css">
+  <script src="../assets/js/main.js" defer></script>
+</head>
+<body>
+  <!-- Capçalera compartida per totes les pàgines. -->
+  <header class="site-header">
+    <a class="brand" href="../index.html" aria-label="Anar a l'inici">
+      <span class="brand-mark">DAM 1</span>
+      <span>Digitalització aplicada</span>
+    </a>
+
+    <button class="menu-button" type="button" aria-expanded="false" aria-controls="main-nav">
+      <span></span><span></span><span></span>
+      <span class="sr-only">Obrir el menú</span>
+    </button>
+
+    <nav class="main-nav" id="main-nav" aria-label="Navegació principal">
+      <a href="../index.html">Inici</a>
+      <a href="../index.html#equip">Equip</a>
+      <div class="nav-dropdown">
+        <button class="dropdown-toggle" type="button" aria-expanded="false">
+          Workshops <span aria-hidden="true">⌄</span>
+        </button>
+        <div class="dropdown-menu">
+          <a href="sistemes-operatius.html"><span>01</span>Sistemes operatius</a>
+          <a href="control-versions.html"><span>02</span>Control de versions</a>
+          <a href="programacio.html"><span>03</span>Programació</a>
+          <a href="base-dades.html"><span>04</span>Bases de dades</a>
+          <a href="disseny-interficies.html"><span>05</span>Disseny d'interfícies</a>
+          <a href="ia.html"><span>06</span>Intel·ligència artificial</a>
+          <a class="active" href="ti-iot.html"><span>07</span>TI / IoT</a>
+          <a href="conclusions.html"><span>08</span>Conclusions</a>
+        </div>
+      </div>
+    </nav>
+  </header>
+
+  <main>
+    <section class="workshop-hero">
+      <div class="breadcrumbs">
+        <a href="../index.html">Inici</a><span>/</span>
+        <a href="../index.html#workshops">Workshops</a><span>/</span>
+        <span>TI / IoT</span>
+      </div>
+
+      <div class="workshop-title">
+        <div>
+          <p class="eyebrow">Infraestructura i cloud computing</p>
+          <h1>TI / IoT</h1>
+        </div>
+        <span class="workshop-index">Workshop 07</span>
+      </div>
+    </section>
+
+    <div class="workshop-layout">
+      <aside class="side-index">
+        <p>Contingut</p>
+        <a href="#resum">Resum</a>
+        <a href="#aprenentatges">Què hem après</a>
+        <a href="#activitats">Activitats</a>
+        <a href="#captures">Captures</a>
+      </aside>
+
+      <!-- Resum i aprenentatges apareixen junts; activitats ocupa tota l'amplada. -->
+      <article class="workshop-content">
+        <section class="content-section" id="resum">
+          <p class="section-label">Resum</p>
+          <h2>De què va tractar el workshop</h2>
+          <p class="lead">Vam estudiar conceptes bàsics d'infraestructura i cloud computing: CI/CD, centres de processament de dades, serveis al núvol i arquitectures reals de plataformes amb milions d'usuaris.</p>
+        </section>
+
+        <section class="content-section" id="aprenentatges">
+          <p class="section-label">Aprenentatges</p>
+          <h2>Què hem après</h2>
+          <ul class="content-list">
+            <li>La feina de sistemes és essencial perquè els serveis estiguin disponibles i connectats.</li>
+            <li>CI/CD automatitza proves, integració i desplegament del programari.</li>
+            <li>Un CPD necessita disponibilitat permanent, manteniment, seguretat i alimentació de suport.</li>
+            <li>El núvol facilita l'escalabilitat, però el cost depèn dels recursos i del temps d'ús.</li>
+            <li>Les grans plataformes utilitzen serveis distribuïts, replicació, partició de dades i CDN.</li>
+          </ul>
+        </section>
+
+        <section class="content-section" id="activitats">
+          <p class="section-label">Activitats</p>
+          <h2>Preguntes sobre infraestructura i cloud</h2>
+          <div class="table-wrap">
+            <table class="content-table">
+              <thead><tr><th>Pregunta o activitat</th><th>Resposta</th></tr></thead>
+              <tbody>
+                <tr>
+                  <td>Què és CI/CD?</td>
+                  <td>La integració contínua permet enviar canvis sovint a un repositori central i executar proves automàtiques. El desplegament continu prepara i publica el codi que ha superat les comprovacions. Aquest entorn està relacionat amb el perfil DevOps, que combina desenvolupament i sistemes.</td>
+                </tr>
+                <tr>
+                  <td>Quins requeriments ha de tenir un CPD?</td>
+                  <td>Ha d'estar connectat i disponible les 24 hores, tenir manteniment, mesures de seguretat i prevenció de riscos, refrigeració i sistemes d'alimentació ininterrompuda com un SAI.</td>
+                </tr>
+                <tr>
+                  <td>Quin cost té una instància EC2 t3.2xlarge a AWS Espanya?</td>
+                  <td>La consulta feta per al workshop donava un preu aproximat de 0,3648 USD per hora en modalitat sota demanda amb Linux, uns 266,30 USD mensuals si funcionava de manera contínua. El cost real pot augmentar amb l'emmagatzematge, el trànsit i altres serveis.</td>
+                </tr>
+                <tr>
+                  <td>Quina arquitectura mínima utilitzaríem per a una aplicació web dinàmica?</td>
+                  <td>Un servidor web per rebre les peticions, un servidor d'aplicacions amb la lògica del backend i un motor de base de dades com PostgreSQL o MySQL.</td>
+                </tr>
+                <tr>
+                  <td>Com és l'arquitectura de Facebook?</td>
+                  <td>És una arquitectura distribuïda formada per diferents serveis. Ha evolucionat des d'un entorn basat en Linux, Apache, MySQL i PHP, i utilitza tècniques com el sharding i la replicació per millorar l'escalabilitat i la disponibilitat.</td>
+                </tr>
+                <tr>
+                  <td>Com és l'arquitectura d'HBO?</td>
+                  <td>Distribueix funcions com els usuaris, el catàleg i la reproducció entre diferents serveis. Utilitza infraestructura al núvol i xarxes CDN per apropar el contingut als usuaris, reduir el temps de càrrega i suportar moltes reproduccions simultànies.</td>
+                </tr>
+                <tr>
+                  <td>Com és l'arquitectura de Netflix?</td>
+                  <td>Utilitza una arquitectura distribuïda basada en molts serveis independents. Gran part de la infraestructura funciona al núvol i combina tecnologies com AWS, Cassandra i Apache Kafka per gestionar i distribuir grans quantitats de dades.</td>
+                </tr>
+              </tbody>
+            </table>
+          </div>
+
+          <p class="pending-note"><strong>Conclusió:</strong> ens va sorprendre el creixement del cloud i les possibilitats que ofereix. Serveis com GeForce NOW o Amazon Luna mostren que és possible executar aplicacions exigents en equips remots i fer-les accessibles des de dispositius menys potents.</p>
+        </section>
+
+        <!-- GALERIA: substitueix cada placeholder per una etiqueta <img>. -->
+        <section class="content-section" id="captures">
+          <p class="section-label">Contingut gràfic</p>
+          <h2>Captures de les activitats</h2>
+          <p class="capture-intro">
+            Afegiu aquí captures del procés, dels resultats o de les eines utilitzades.
+            Guardeu les imatges a <code>assets/img</code> i canvieu cada placeholder per
+            una etiqueta <code>&lt;img&gt;</code>.
+          </p>
+
+          <div class="capture-grid">
+            <figure class="capture-item">
+              <!-- Substituïu aquest bloc per una imatge ubicada a assets/img/captura-1.png. -->
+              <div class="capture-placeholder"><span>CI/CD</span></div>
+              <figcaption>Esquema del procés d'integració i desplegament continu.</figcaption>
+            </figure>
+
+            <figure class="capture-item">
+              <!-- Substituïu aquest bloc per una imatge ubicada a assets/img/captura-2.png. -->
+              <div class="capture-placeholder"><span>Arquitectura web</span></div>
+              <figcaption>Servidor web, servidor d'aplicacions i base de dades.</figcaption>
+            </figure>
+
+            <figure class="capture-item">
+              <!-- Substituïu aquest bloc per una imatge ubicada a assets/img/captura-3.png. -->
+              <div class="capture-placeholder"><span>Cloud computing</span></div>
+              <figcaption>Exemple d'un servei o d'una arquitectura desplegada al núvol.</figcaption>
+            </figure>
+          </div>
+        </section>
+
+        <nav class="page-navigation" aria-label="Navegació entre workshops">
+          <a href="ia.html"><span>Anterior</span><strong>← Intel·ligència artificial</strong></a>
+          <a href="conclusions.html"><span>Següent</span><strong>Conclusions →</strong></a>
+        </nav>
+      </article>
+    </div>
+  </main>
+
+  <footer class="site-footer">
+    <p>DAM 1 · Digitalització aplicada</p>
+    <p>Estructura generada amb IA · Contingut elaborat per humans</p>
+  </footer>
+</body>
+</html>

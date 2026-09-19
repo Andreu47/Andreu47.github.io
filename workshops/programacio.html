@@ -1,0 +1,174 @@
+<!doctype html>
+<html lang="ca">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Workshop de programació del projecte DAM 1.">
+  <title>Programació · DAM 1</title>
+
+  <link rel="icon" type="image/svg+xml" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'%3E%3Crect width='64' height='64' rx='8' fill='%23ffffff'/%3E%3Cpath d='M17 19h14c10 0 16 5 16 13S41 45 31 45H17V19Zm10 7v12h4c5 0 8-2 8-6s-3-6-8-6h-4Z' fill='%233f73a4'/%3E%3C/svg%3E">
+  <link rel="stylesheet" href="../assets/css/base.css">
+  <link rel="stylesheet" href="../assets/css/navigation.css">
+  <link rel="stylesheet" href="../assets/css/workshops.css">
+  <link rel="stylesheet" href="../assets/css/responsive.css">
+  <script src="../assets/js/main.js" defer></script>
+</head>
+<body>
+  <!-- Capçalera compartida per totes les pàgines. -->
+  <header class="site-header">
+    <a class="brand" href="../index.html" aria-label="Anar a l'inici">
+      <span class="brand-mark">DAM 1</span>
+      <span>Digitalització aplicada</span>
+    </a>
+
+    <button class="menu-button" type="button" aria-expanded="false" aria-controls="main-nav">
+      <span></span><span></span><span></span>
+      <span class="sr-only">Obrir el menú</span>
+    </button>
+
+    <nav class="main-nav" id="main-nav" aria-label="Navegació principal">
+      <a href="../index.html">Inici</a>
+      <a href="../index.html#equip">Equip</a>
+      <div class="nav-dropdown">
+        <button class="dropdown-toggle" type="button" aria-expanded="false">
+          Workshops <span aria-hidden="true">⌄</span>
+        </button>
+        <div class="dropdown-menu">
+          <a href="sistemes-operatius.html"><span>01</span>Sistemes operatius</a>
+          <a href="control-versions.html"><span>02</span>Control de versions</a>
+          <a class="active" href="programacio.html"><span>03</span>Programació</a>
+          <a href="base-dades.html"><span>04</span>Bases de dades</a>
+          <a href="disseny-interficies.html"><span>05</span>Disseny d'interfícies</a>
+          <a href="ia.html"><span>06</span>Intel·ligència artificial</a>
+          <a href="ti-iot.html"><span>07</span>TI / IoT</a>
+          <a href="conclusions.html"><span>08</span>Conclusions</a>
+        </div>
+      </div>
+    </nav>
+  </header>
+
+  <main>
+    <section class="workshop-hero">
+      <div class="breadcrumbs">
+        <a href="../index.html">Inici</a><span>/</span>
+        <a href="../index.html#workshops">Workshops</a><span>/</span>
+        <span>Programació</span>
+      </div>
+
+      <div class="workshop-title">
+        <div>
+          <p class="eyebrow">Desenvolupament de programari</p>
+          <h1>Programació</h1>
+        </div>
+        <span class="workshop-index">Workshop 03</span>
+      </div>
+    </section>
+
+    <div class="workshop-layout">
+      <aside class="side-index">
+        <p>Contingut</p>
+        <a href="#resum">Resum</a>
+        <a href="#aprenentatges">Què hem après</a>
+        <a href="#activitats">Activitats</a>
+        <a href="#captures">Captures</a>
+      </aside>
+
+      <!-- Resum i aprenentatges apareixen junts; activitats ocupa tota l'amplada. -->
+      <article class="workshop-content">
+        <section class="content-section" id="resum">
+          <p class="section-label">Resum</p>
+          <h2>De què va tractar el workshop</h2>
+          <p class="lead">Vam fer una introducció pràctica a la programació amb tres exemples senzills en Kotlin. Abans de començar amb el codi, vam simular el funcionament d'un plotter per entendre que un ordinador executa exactament les instruccions que rep.</p>
+        </section>
+
+        <section class="content-section" id="aprenentatges">
+          <p class="section-label">Aprenentatges</p>
+          <h2>Què hem après</h2>
+          <ul class="content-list">
+            <li>Les instruccions d'un programa han de ser precises i seguir un ordre.</li>
+            <li><code>print</code> i <code>println</code> mostren informació, mentre que <code>readln</code> permet introduir dades.</li>
+            <li>Les variables guarden valors de tipus <code>String</code>, <code>Int</code>, <code>Float</code> o <code>Boolean</code>.</li>
+            <li>Els operadors permeten fer càlculs, concatenar text i treballar amb condicions.</li>
+            <li>La instrucció <code>if</code> executa un bloc només quan es compleix una condició.</li>
+          </ul>
+        </section>
+
+        <section class="content-section" id="activitats">
+          <p class="section-label">Activitats</p>
+          <h2>Exercicis i exemples</h2>
+
+          <div class="activity-section">
+            <h3>1. Simulació d'un plotter</h3>
+            <p>Una persona feia de programador i una altra de plotter. Només es podien utilitzar les ordres PL, BL, Hx, Ax i Mx per aixecar o baixar el llapis, girar i moure'l. L'activitat mostrava la importància de donar instruccions completes i sense ambigüitats.</p>
+          </div>
+
+          <div class="activity-section">
+            <h3>2. Sortida de dades</h3>
+            <pre class="command-block"><code>println("Hola ITB!")
+print("Hola ITB!")
+print("Què tal?")</code></pre>
+          </div>
+
+          <div class="activity-section">
+            <h3>3. Entrada i variables</h3>
+            <pre class="command-block"><code>println("Quina edat tens?")
+var edat: Int = readln().toInt()
+println("Tens $edat anys")</code></pre>
+          </div>
+
+          <div class="activity-section">
+            <h3>4. Condicionals</h3>
+            <pre class="command-block"><code>var vullFormatge: Boolean = true
+print("Fent un entrepà de llom")
+
+if (vullFormatge) {
+    println("...amb formatge!")
+}</code></pre>
+          </div>
+        </section>
+
+        <!-- GALERIA: substitueix cada placeholder per una etiqueta <img>. -->
+        <section class="content-section" id="captures">
+          <p class="section-label">Contingut gràfic</p>
+          <h2>Captures de les activitats</h2>
+          <p class="capture-intro">
+            Afegiu aquí captures del procés, dels resultats o de les eines utilitzades.
+            Guardeu les imatges a <code>assets/img</code> i canvieu cada placeholder per
+            una etiqueta <code>&lt;img&gt;</code>.
+          </p>
+
+          <div class="capture-grid">
+            <figure class="capture-item">
+              <!-- Substituïu aquest bloc per una imatge ubicada a assets/img/captura-1.png. -->
+              <div class="capture-placeholder"><span>Activitat del plotter</span></div>
+              <figcaption>Instruccions o dibuix realitzat durant la simulació del plotter.</figcaption>
+            </figure>
+
+            <figure class="capture-item">
+              <!-- Substituïu aquest bloc per una imatge ubicada a assets/img/captura-2.png. -->
+              <div class="capture-placeholder"><span>Entrada i sortida</span></div>
+              <figcaption>Execució d'un dels exemples d'entrada, sortida i variables.</figcaption>
+            </figure>
+
+            <figure class="capture-item">
+              <!-- Substituïu aquest bloc per una imatge ubicada a assets/img/captura-3.png. -->
+              <div class="capture-placeholder"><span>Condicionals</span></div>
+              <figcaption>Resultat de l'exemple amb la instrucció condicional <code>if</code>.</figcaption>
+            </figure>
+          </div>
+        </section>
+
+        <nav class="page-navigation" aria-label="Navegació entre workshops">
+          <a href="control-versions.html"><span>Anterior</span><strong>← Control de versions</strong></a>
+          <a href="base-dades.html"><span>Següent</span><strong>Bases de dades →</strong></a>
+        </nav>
+      </article>
+    </div>
+  </main>
+
+  <footer class="site-footer">
+    <p>DAM 1 · Digitalització aplicada</p>
+    <p>Estructura generada amb IA · Contingut elaborat per humans</p>
+  </footer>
+</body>
+</html>

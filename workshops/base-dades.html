@@ -1,0 +1,198 @@
+<!doctype html>
+<html lang="ca">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Workshop de bases de dades amb PostgreSQL, Alwaysdata i DataGrip.">
+  <title>Bases de dades · DAM 1</title>
+
+  <link rel="icon" type="image/svg+xml" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'%3E%3Crect width='64' height='64' rx='8' fill='%23ffffff'/%3E%3Cpath d='M17 19h14c10 0 16 5 16 13S41 45 31 45H17V19Zm10 7v12h4c5 0 8-2 8-6s-3-6-8-6h-4Z' fill='%233f73a4'/%3E%3C/svg%3E">
+  <link rel="stylesheet" href="../assets/css/base.css">
+  <link rel="stylesheet" href="../assets/css/navigation.css">
+  <link rel="stylesheet" href="../assets/css/workshops.css">
+  <link rel="stylesheet" href="../assets/css/responsive.css">
+  <script src="../assets/js/main.js" defer></script>
+</head>
+<body>
+  <!-- Capçalera compartida per totes les pàgines. -->
+  <header class="site-header">
+    <a class="brand" href="../index.html" aria-label="Anar a l'inici">
+      <span class="brand-mark">DAM 1</span>
+      <span>Digitalització aplicada</span>
+    </a>
+
+    <button class="menu-button" type="button" aria-expanded="false" aria-controls="main-nav">
+      <span></span><span></span><span></span>
+      <span class="sr-only">Obrir el menú</span>
+    </button>
+
+    <nav class="main-nav" id="main-nav" aria-label="Navegació principal">
+      <a href="../index.html">Inici</a>
+      <a href="../index.html#equip">Equip</a>
+      <div class="nav-dropdown">
+        <button class="dropdown-toggle" type="button" aria-expanded="false">
+          Workshops <span aria-hidden="true">⌄</span>
+        </button>
+        <div class="dropdown-menu">
+          <a href="sistemes-operatius.html"><span>01</span>Sistemes operatius</a>
+          <a href="control-versions.html"><span>02</span>Control de versions</a>
+          <a href="programacio.html"><span>03</span>Programació</a>
+          <a class="active" href="base-dades.html"><span>04</span>Bases de dades</a>
+          <a href="disseny-interficies.html"><span>05</span>Disseny d'interfícies</a>
+          <a href="ia.html"><span>06</span>Intel·ligència artificial</a>
+          <a href="ti-iot.html"><span>07</span>TI / IoT</a>
+          <a href="conclusions.html"><span>08</span>Conclusions</a>
+        </div>
+      </div>
+    </nav>
+  </header>
+
+  <main>
+    <section class="workshop-hero">
+      <div class="breadcrumbs">
+        <a href="../index.html">Inici</a><span>/</span>
+        <a href="../index.html#workshops">Workshops</a><span>/</span>
+        <span>Bases de dades</span>
+      </div>
+
+      <div class="workshop-title">
+        <div>
+          <p class="eyebrow">Dades i SQL</p>
+          <h1>Bases de dades</h1>
+        </div>
+        <span class="workshop-index">Workshop 04</span>
+      </div>
+    </section>
+
+    <div class="workshop-layout">
+      <aside class="side-index">
+        <p>Contingut</p>
+        <a href="#resum">Resum</a>
+        <a href="#aprenentatges">Què hem après</a>
+        <a href="#activitats">Activitats</a>
+        <a href="#captures">Captures</a>
+      </aside>
+
+      <!-- Resum i aprenentatges apareixen junts; activitats ocupa tota l'amplada. -->
+      <article class="workshop-content">
+        <section class="content-section" id="resum">
+          <p class="section-label">Resum</p>
+          <h2>PostgreSQL al núvol</h2>
+          <p class="lead">
+            Vam crear dues bases de dades a Alwaysdata, vam importar els conjunts
+            <strong>hr</strong> i <strong>training</strong>, vam configurar usuaris
+            amb permisos diferents i vam connectar les bases a DataGrip.
+          </p>
+
+          <div class="summary-columns">
+            <div>
+              <h3>Administració</h3>
+              <p>Creació de bases, importació SQL i gestió d'usuaris.</p>
+            </div>
+            <div>
+              <h3>Consulta i disseny</h3>
+              <p>Consultes, connexions remotes i diagrames entitat-relació.</p>
+            </div>
+          </div>
+        </section>
+
+        <section class="content-section" id="aprenentatges">
+          <p class="section-label">Aprenentatges</p>
+          <h2>Què hem après</h2>
+          <ul class="content-list">
+            <li>Administrar PostgreSQL en un servei cloud.</li>
+            <li>Importar estructures i dades des d'un fitxer SQL.</li>
+            <li>Crear usuaris i limitar-ne els permisos.</li>
+            <li>Configurar connexions a phpPgAdmin i DataGrip.</li>
+            <li>Filtrar dades amb diferents condicions SQL.</li>
+            <li>Generar diagrames de les bases de dades.</li>
+          </ul>
+        </section>
+
+        <section class="content-section" id="activitats">
+          <p class="section-label">Activitats</p>
+          <h2>Treball realitzat</h2>
+
+          <div class="activity-section">
+            <h3>Preparació de l'entorn</h3>
+            <p>
+              Vam registrar un compte gratuït, vam crear les bases hr i training,
+              vam importar els fitxers SQL i vam crear un segon usuari amb accés
+              únicament a training.
+            </p>
+          </div>
+
+          <div class="activity-section">
+            <h3>Consultes SQL</h3>
+            <div class="table-wrap">
+              <table class="content-table">
+                <thead><tr><th>Base de dades</th><th>Pregunta</th><th>Resposta</th></tr></thead>
+                <tbody>
+                  <tr><td><code>hr</code></td><td>Veure totes les regions</td><td><code>SELECT * FROM regions;</code></td></tr>
+                  <tr><td><code>training</code></td><td>Veure tots els productes</td><td><code>SELECT * FROM productos;</code></td></tr>
+                  <tr><td><code>hr</code></td><td>Mostrar els països</td><td><code>SELECT country_name FROM countries;</code></td></tr>
+                  <tr><td><code>hr</code></td><td>Departaments que comencen per R</td><td><code>SELECT * FROM departments WHERE department_name LIKE 'R%';</code></td></tr>
+                  <tr><td><code>hr</code></td><td>Departaments sense mànager</td><td><code>SELECT department_name FROM departments WHERE manager_id IS NULL;</code></td></tr>
+                  <tr><td><code>hr</code></td><td>Departaments amb mànager</td><td><code>SELECT department_name FROM departments WHERE manager_id IS NOT NULL;</code></td></tr>
+                  <tr><td><code>training</code></td><td>Productes amb preu superior a 100</td><td><code>SELECT * FROM productos WHERE precio &gt; 100;</code></td></tr>
+                  <tr><td><code>training</code></td><td>Comandes amb el codi de fabricant rei</td><td><code>SELECT * FROM pedidos WHERE fab LIKE 'rei';</code></td></tr>
+                  <tr><td><code>training</code></td><td>Clients amb límit inferior a 30.000</td><td><code>SELECT * FROM clientes WHERE limite_credito &lt; 30000;</code></td></tr>
+                </tbody>
+              </table>
+            </div>
+          </div>
+
+          <div class="activity-section">
+            <h3>DataGrip i diagrames</h3>
+            <p>
+              Vam configurar una connexió per a cada base de dades i vam generar
+              els diagrames entitat-relació per visualitzar les taules i les seves relacions.
+            </p>
+          </div>
+        </section>
+
+        <!-- GALERIA: substitueix cada placeholder per una etiqueta <img>. -->
+        <section class="content-section" id="captures">
+          <p class="section-label">Contingut gràfic</p>
+          <h2>Captures de les activitats</h2>
+          <p class="capture-intro">
+            Afegiu aquí captures del procés, dels resultats o de les eines utilitzades.
+            Guardeu les imatges a <code>assets/img</code> i canvieu cada placeholder per
+            una etiqueta <code>&lt;img&gt;</code>.
+          </p>
+
+          <div class="capture-grid">
+            <figure class="capture-item">
+              <!-- Substituïu aquest bloc per una imatge ubicada a assets/img/captura-1.png. -->
+              <div class="capture-placeholder"><span>Captura 01</span></div>
+              <figcaption>Escriviu una breu explicació de la captura.</figcaption>
+            </figure>
+
+            <figure class="capture-item">
+              <!-- Substituïu aquest bloc per una imatge ubicada a assets/img/captura-2.png. -->
+              <div class="capture-placeholder"><span>Captura 02</span></div>
+              <figcaption>Escriviu una breu explicació de la captura.</figcaption>
+            </figure>
+
+            <figure class="capture-item">
+              <!-- Substituïu aquest bloc per una imatge ubicada a assets/img/captura-3.png. -->
+              <div class="capture-placeholder"><span>Captura 03</span></div>
+              <figcaption>Escriviu una breu explicació de la captura.</figcaption>
+            </figure>
+          </div>
+        </section>
+
+        <nav class="page-navigation" aria-label="Navegació entre workshops">
+          <a href="programacio.html"><span>Anterior</span><strong>← Programació</strong></a>
+          <a href="disseny-interficies.html"><span>Següent</span><strong>Disseny d'interfícies →</strong></a>
+        </nav>
+      </article>
+    </div>
+  </main>
+
+  <footer class="site-footer">
+    <p>DAM 1 · Digitalització aplicada</p>
+    <p>Estructura generada amb IA · Contingut elaborat per humans</p>
+  </footer>
+</body>
+</html>

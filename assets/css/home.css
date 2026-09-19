@@ -1,0 +1,118 @@
+/* Portada */
+.hero {
+  display: flex;
+  align-items: flex-end;
+  min-height: 620px;
+  padding: 105px 0 75px;
+}
+
+.hero > div {
+  width: 100%;
+}
+
+.hero h1 {
+  max-width: 1000px;
+  margin-bottom: 28px;
+  font-size: clamp(3.7rem, 8vw, 7.8rem);
+  letter-spacing: -.065em;
+}
+
+.hero-text {
+  max-width: 680px;
+  color: var(--muted);
+  font-size: 1.15rem;
+}
+
+.primary-link {
+  display: inline-block;
+  margin-top: 23px;
+  color: var(--accent);
+  font-weight: 700;
+  text-decoration: none;
+  border-bottom: 1px solid var(--accent);
+}
+
+/* Membres de l'equip */
+.team-list {
+  display: grid;
+  grid-template-columns: repeat(4, minmax(0, 1fr));
+  gap: 24px;
+}
+
+.team-member {
+  min-width: 0;
+}
+
+.member-photo {
+  display: grid;
+  place-items: center;
+  aspect-ratio: 4 / 3;
+  margin-bottom: 18px;
+  color: #8a949d;
+  background: var(--surface-soft);
+  border: 1px solid var(--line);
+}
+
+.member-photo span {
+  font-size: .78rem;
+  font-weight: 700;
+  letter-spacing: .08em;
+  text-transform: uppercase;
+}
+
+.team-number {
+  color: var(--accent);
+  font-size: .74rem;
+}
+
+.team-member h3 {
+  margin: 5px 0 8px;
+  font-size: 1.18rem;
+}
+
+.team-member p {
+  margin-bottom: 0;
+  color: var(--muted);
+  font-size: .94rem;
+}
+
+/* Índex dels workshops */
+.workshop-list {
+  background: var(--surface);
+  border: 1px solid var(--line);
+}
+
+.workshop-list a {
+  display: grid;
+  grid-template-columns: 60px minmax(220px, 1fr) minmax(150px, .45fr) auto;
+  gap: 24px;
+  align-items: center;
+  padding: 23px 26px;
+  text-decoration: none;
+  border-bottom: 1px solid var(--line);
+}
+
+.workshop-list a:last-child {
+  border-bottom: 0;
+}
+
+.workshop-list a:hover {
+  background: var(--accent-soft);
+}
+
+.workshop-list .number {
+  color: var(--accent);
+  font-size: .76rem;
+}
+
+.workshop-list h3 {
+  margin: 0;
+  font-size: 1.18rem;
+}
+
+.workshop-list p {
+  margin: 0;
+  color: var(--muted);
+  font-size: .9rem;
+}
+
