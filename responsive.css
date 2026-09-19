@@ -1,0 +1,138 @@
+@media (max-width: 950px) {
+  .team-list {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+
+  .workshop-layout {
+    grid-template-columns: 1fr;
+    gap: 28px;
+  }
+
+  .side-index {
+    position: static;
+    display: flex;
+    flex-wrap: wrap;
+    gap: 5px 20px;
+    padding-bottom: 22px;
+    border-bottom: 1px solid var(--line);
+  }
+
+  .side-index p {
+    width: 100%;
+    margin-bottom: 2px;
+  }
+}
+
+@media (max-width: 720px) {
+  .menu-button {
+    display: block;
+  }
+
+  .main-nav {
+    position: absolute;
+    top: 65px;
+    left: var(--page-padding);
+    right: var(--page-padding);
+    display: none;
+    align-items: stretch;
+    flex-direction: column;
+    gap: 5px;
+    padding: 14px 20px;
+    background: var(--surface);
+    border: 1px solid var(--line);
+    box-shadow: 0 10px 30px rgba(39, 52, 64, .12);
+  }
+
+  .main-nav.open {
+    display: flex;
+  }
+
+  .nav-dropdown,
+  .dropdown-toggle {
+    width: 100%;
+  }
+
+  .dropdown-toggle {
+    justify-content: space-between;
+  }
+
+  .dropdown-menu {
+    position: static;
+    width: 100%;
+    margin-top: 5px;
+    box-shadow: none;
+  }
+
+  .hero {
+    min-height: auto;
+    padding: 70px 0 60px;
+  }
+
+  .hero h1 {
+    font-size: clamp(3.2rem, 16vw, 5.5rem);
+  }
+
+  .section {
+    padding: 65px 0;
+  }
+
+  .workshop-list a {
+    grid-template-columns: 42px 1fr;
+    gap: 10px;
+    padding: 20px;
+  }
+
+  .workshop-list p,
+  .workshop-list .arrow {
+    grid-column: 2;
+  }
+
+  .workshop-title,
+  .workshop-content {
+    grid-template-columns: 1fr;
+  }
+
+  .workshop-index {
+    grid-row: 1;
+  }
+
+  #activitats,
+  #captures,
+  .page-navigation {
+    grid-column: 1;
+  }
+
+  .summary-columns {
+    grid-template-columns: 1fr;
+  }
+
+  .capture-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .page-navigation {
+    grid-template-columns: 1fr;
+  }
+
+  .page-navigation a:last-child {
+    text-align: left;
+  }
+
+  .site-footer {
+    flex-direction: column;
+    gap: 7px;
+  }
+}
+
+@media (max-width: 500px) {
+  .team-list {
+    grid-template-columns: 1fr;
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  html {
+    scroll-behavior: auto;
+  }
+}
+

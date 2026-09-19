@@ -1,0 +1,213 @@
+<!doctype html>
+<html lang="ca">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Workshop de sistemes operatius, terminal Linux i virtualització.">
+  <title>Sistemes operatius · DAM 1</title>
+
+  <link rel="icon" type="image/svg+xml" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'%3E%3Crect width='64' height='64' rx='8' fill='%23ffffff'/%3E%3Cpath d='M17 19h14c10 0 16 5 16 13S41 45 31 45H17V19Zm10 7v12h4c5 0 8-2 8-6s-3-6-8-6h-4Z' fill='%233f73a4'/%3E%3C/svg%3E">
+  <link rel="stylesheet" href="../assets/css/base.css">
+  <link rel="stylesheet" href="../assets/css/navigation.css">
+  <link rel="stylesheet" href="../assets/css/workshops.css">
+  <link rel="stylesheet" href="../assets/css/responsive.css">
+  <script src="../assets/js/main.js" defer></script>
+</head>
+<body>
+  <!-- Capçalera compartida per totes les pàgines. -->
+  <header class="site-header">
+    <a class="brand" href="../index.html" aria-label="Anar a l'inici">
+      <span class="brand-mark">DAM 1</span>
+      <span>Digitalització aplicada</span>
+    </a>
+
+    <button class="menu-button" type="button" aria-expanded="false" aria-controls="main-nav">
+      <span></span><span></span><span></span>
+      <span class="sr-only">Obrir el menú</span>
+    </button>
+
+    <nav class="main-nav" id="main-nav" aria-label="Navegació principal">
+      <a href="../index.html">Inici</a>
+      <a href="../index.html#equip">Equip</a>
+      <div class="nav-dropdown">
+        <button class="dropdown-toggle" type="button" aria-expanded="false">
+          Workshops <span aria-hidden="true">⌄</span>
+        </button>
+        <div class="dropdown-menu">
+          <a class="active" href="sistemes-operatius.html"><span>01</span>Sistemes operatius</a>
+          <a href="control-versions.html"><span>02</span>Control de versions</a>
+          <a href="programacio.html"><span>03</span>Programació</a>
+          <a href="base-dades.html"><span>04</span>Bases de dades</a>
+          <a href="disseny-interficies.html"><span>05</span>Disseny d'interfícies</a>
+          <a href="ia.html"><span>06</span>Intel·ligència artificial</a>
+          <a href="ti-iot.html"><span>07</span>TI / IoT</a>
+          <a href="conclusions.html"><span>08</span>Conclusions</a>
+        </div>
+      </div>
+    </nav>
+  </header>
+
+  <main>
+    <section class="workshop-hero">
+      <div class="breadcrumbs">
+        <a href="../index.html">Inici</a><span>/</span>
+        <a href="../index.html#workshops">Workshops</a><span>/</span>
+        <span>Sistemes operatius</span>
+      </div>
+
+      <div class="workshop-title">
+        <div>
+          <p class="eyebrow">Sistemes i virtualització</p>
+          <h1>Sistemes operatius</h1>
+        </div>
+        <span class="workshop-index">Workshop 01</span>
+      </div>
+    </section>
+
+    <div class="workshop-layout">
+      <aside class="side-index">
+        <p>Contingut</p>
+        <a href="#resum">Resum</a>
+        <a href="#aprenentatges">Què hem après</a>
+        <a href="#activitats">Activitats</a>
+        <a href="#captures">Captures</a>
+      </aside>
+
+      <!-- Resum i aprenentatges apareixen junts; activitats ocupa tota l'amplada. -->
+      <article class="workshop-content">
+        <section class="content-section" id="resum">
+          <p class="section-label">Resum</p>
+          <h2>Linux i virtualització</h2>
+          <p class="lead">
+            Vam treballar amb el terminal de Linux per consultar informació del sistema,
+            gestionar fitxers i controlar processos. Després vam crear màquines virtuals
+            en local amb VirtualBox i en remot amb IsardVDI.
+          </p>
+
+          <div class="summary-columns">
+            <div>
+              <h3>Terminal</h3>
+              <p>Ordres bàsiques per entendre i administrar el sistema.</p>
+            </div>
+            <div>
+              <h3>Virtualització</h3>
+              <p>Execució d'altres sistemes operatius sense substituir el sistema principal.</p>
+            </div>
+          </div>
+        </section>
+
+        <section class="content-section" id="aprenentatges">
+          <p class="section-label">Aprenentatges</p>
+          <h2>Què hem après</h2>
+          <ul class="content-list">
+            <li>Interpretar informació del sistema, el disc i els processos.</li>
+            <li>Crear, localitzar, consultar i eliminar fitxers.</li>
+            <li>Finalitzar processos mitjançant el seu PID.</li>
+            <li>Assignar CPU, memòria i disc a una màquina virtual.</li>
+            <li>Diferenciar la virtualització local de la remota.</li>
+          </ul>
+        </section>
+
+        <section class="content-section" id="activitats">
+          <p class="section-label">Activitats</p>
+          <h2>Exercicis i respostes</h2>
+
+          <div class="activity-section">
+            <h3>Part 1 · El terminal</h3>
+            <div class="table-wrap">
+              <table class="content-table">
+                <thead><tr><th>Pregunta o ordre</th><th>Resposta</th></tr></thead>
+                <tbody>
+                  <tr><td><code>uname -a</code></td><td>Mostra el nucli, el nom de l'equip, la versió del sistema i l'arquitectura.</td></tr>
+                  <tr><td><code>df -h</code></td><td>Indica el sistema de fitxers, la mida, l'espai utilitzat i disponible, el percentatge d'ús i el punt de muntatge.</td></tr>
+                  <tr><td><code>touch / ls / rm</code></td><td>Permeten crear un fitxer, comprovar que existeix i eliminar-lo.</td></tr>
+                  <tr><td><code>ps aux</code></td><td>Llista els processos i informa de l'usuari, PID, CPU, memòria, estat i ordre.</td></tr>
+                  <tr><td><code>find</code></td><td>Cerca fitxers i directoris de manera recursiva.</td></tr>
+                  <tr><td><code>cat</code></td><td>Mostra el contingut d'un fitxer de text.</td></tr>
+                  <tr><td><code>kill &lt;PID&gt;</code></td><td>Finalitza el procés que correspon a l'identificador indicat.</td></tr>
+                  <tr><td><code>top</code></td><td>Mostra en temps real els processos i el consum de recursos.</td></tr>
+                </tbody>
+              </table>
+            </div>
+          </div>
+
+          <div class="activity-section">
+            <h3>Part 2 · Virtualització local</h3>
+            <p>
+              Virtualitzar consisteix a executar un sistema operatiu dins d'una màquina
+              simulada per programari. A VirtualBox vam seleccionar una ISO i vam configurar
+              el disc, la memòria RAM i el nombre de CPU.
+            </p>
+            <div class="table-wrap">
+              <table class="content-table">
+                <thead><tr><th>Distribució</th><th>Punt fort</th></tr></thead>
+                <tbody>
+                  <tr><td>Ubuntu</td><td>Facilitat d'ús i comunitat.</td></tr>
+                  <tr><td>Linux Mint</td><td>Transició senzilla des de Windows.</td></tr>
+                  <tr><td>Arch Linux</td><td>Personalització i control.</td></tr>
+                  <tr><td>Fedora</td><td>Tecnologies recents.</td></tr>
+                  <tr><td>Debian</td><td>Estabilitat i robustesa.</td></tr>
+                  <tr><td>Kali Linux</td><td>Ciberseguretat i auditoria.</td></tr>
+                  <tr><td>Manjaro</td><td>Base Arch més accessible.</td></tr>
+                  <tr><td>Tails</td><td>Privacitat i anonimat.</td></tr>
+                  <tr><td>Pop!_OS</td><td>Jocs i targetes gràfiques.</td></tr>
+                  <tr><td>Alpine Linux</td><td>Lleugeresa i contenidors.</td></tr>
+                </tbody>
+              </table>
+            </div>
+          </div>
+
+          <div class="activity-section">
+            <h3>Part 3 · Virtualització remota</h3>
+            <p>
+              A IsardVDI vam crear una màquina Ubuntu que utilitzava els recursos
+              d'un servidor remot en lloc dels recursos físics del nostre ordinador.
+            </p>
+          </div>
+        </section>
+
+        <!-- GALERIA: substitueix cada placeholder per una etiqueta <img>. -->
+        <section class="content-section" id="captures">
+          <p class="section-label">Contingut gràfic</p>
+          <h2>Captures de les activitats</h2>
+          <p class="capture-intro">
+            Afegiu aquí captures del procés, dels resultats o de les eines utilitzades.
+            Guardeu les imatges a <code>assets/img</code> i canvieu cada placeholder per
+            una etiqueta <code>&lt;img&gt;</code>.
+          </p>
+
+          <div class="capture-grid">
+            <figure class="capture-item">
+              <!-- Substituïu aquest bloc per una imatge ubicada a assets/img/captura-1.png. -->
+              <div class="capture-placeholder"><span>Captura 01</span></div>
+              <figcaption>Escriviu una breu explicació de la captura.</figcaption>
+            </figure>
+
+            <figure class="capture-item">
+              <!-- Substituïu aquest bloc per una imatge ubicada a assets/img/captura-2.png. -->
+              <div class="capture-placeholder"><span>Captura 02</span></div>
+              <figcaption>Escriviu una breu explicació de la captura.</figcaption>
+            </figure>
+
+            <figure class="capture-item">
+              <!-- Substituïu aquest bloc per una imatge ubicada a assets/img/captura-3.png. -->
+              <div class="capture-placeholder"><span>Captura 03</span></div>
+              <figcaption>Escriviu una breu explicació de la captura.</figcaption>
+            </figure>
+          </div>
+        </section>
+
+        <nav class="page-navigation" aria-label="Navegació entre workshops">
+          <a href="../index.html#workshops"><span>Anterior</span><strong>← Índex de workshops</strong></a>
+          <a href="control-versions.html"><span>Següent</span><strong>Control de versions →</strong></a>
+        </nav>
+      </article>
+    </div>
+  </main>
+
+  <footer class="site-footer">
+    <p>DAM 1 · Digitalització aplicada</p>
+    <p>Estructura generada amb IA · Contingut elaborat per humans</p>
+  </footer>
+</body>
+</html>

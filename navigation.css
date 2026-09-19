@@ -1,0 +1,135 @@
+/* Capçalera i navegació principal */
+.site-header {
+  position: sticky;
+  top: 0;
+  z-index: 10;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  width: 100%;
+  padding: 16px var(--page-padding);
+  background: rgba(255, 255, 255, .96);
+  border-bottom: 1px solid var(--line);
+}
+
+.brand {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  font-weight: 700;
+  text-decoration: none;
+}
+
+.brand-mark {
+  color: var(--accent);
+  font-size: .78rem;
+  letter-spacing: .08em;
+}
+
+.main-nav {
+  display: flex;
+  align-items: center;
+  gap: 24px;
+}
+
+.main-nav > a,
+.dropdown-toggle {
+  padding: 7px 0;
+  color: var(--muted);
+  font: inherit;
+  text-decoration: none;
+  background: transparent;
+  border: 0;
+  border-bottom: 2px solid transparent;
+  cursor: pointer;
+}
+
+.main-nav > a:hover,
+.main-nav > a.active,
+.dropdown-toggle:hover,
+.dropdown-toggle[aria-expanded="true"] {
+  color: var(--text);
+  border-color: var(--accent);
+}
+
+.menu-button {
+  display: none;
+  padding: 8px;
+  background: none;
+  border: 0;
+}
+
+.menu-button span:not(.sr-only) {
+  display: block;
+  width: 24px;
+  height: 2px;
+  margin: 5px;
+  background: var(--text);
+}
+
+.nav-dropdown {
+  position: relative;
+}
+
+.dropdown-toggle {
+  display: flex;
+  align-items: center;
+  gap: 7px;
+}
+
+.dropdown-menu {
+  position: absolute;
+  top: calc(100% + 12px);
+  right: 0;
+  display: none;
+  width: 280px;
+  padding: 8px 18px;
+  background: var(--surface);
+  border: 1px solid var(--line);
+  box-shadow: 0 10px 30px rgba(39, 52, 64, .12);
+}
+
+.nav-dropdown.open .dropdown-menu,
+.nav-dropdown:focus-within .dropdown-menu {
+  display: block;
+}
+
+.dropdown-menu a {
+  display: flex;
+  gap: 14px;
+  padding: 10px 0;
+  color: var(--muted);
+  text-decoration: none;
+  border-bottom: 1px solid var(--line);
+}
+
+.dropdown-menu a:last-child {
+  border-bottom: 0;
+}
+
+.dropdown-menu a:hover,
+.dropdown-menu a.active {
+  color: var(--accent);
+}
+
+.dropdown-menu span {
+  color: var(--accent);
+  font-size: .74rem;
+}
+
+/* Peu de pàgina compartit */
+.site-footer {
+  display: flex;
+  justify-content: space-between;
+  width: 100%;
+  padding: 28px var(--page-padding) 40px;
+  color: var(--muted);
+  background: var(--surface);
+  border-top: 1px solid var(--line);
+  font-size: .85rem;
+}
+
+.site-footer p {
+  margin: 0;
+}
+

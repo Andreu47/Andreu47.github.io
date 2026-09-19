@@ -1,0 +1,186 @@
+<!doctype html>
+<html lang="ca">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Workshop de disseny d'interfícies del projecte DAM 1.">
+  <title>Disseny d'interfícies · DAM 1</title>
+
+  <link rel="icon" type="image/svg+xml" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'%3E%3Crect width='64' height='64' rx='8' fill='%23ffffff'/%3E%3Cpath d='M17 19h14c10 0 16 5 16 13S41 45 31 45H17V19Zm10 7v12h4c5 0 8-2 8-6s-3-6-8-6h-4Z' fill='%233f73a4'/%3E%3C/svg%3E">
+  <link rel="stylesheet" href="../assets/css/base.css">
+  <link rel="stylesheet" href="../assets/css/navigation.css">
+  <link rel="stylesheet" href="../assets/css/workshops.css">
+  <link rel="stylesheet" href="../assets/css/responsive.css">
+  <script src="../assets/js/main.js" defer></script>
+</head>
+<body>
+  <!-- Capçalera compartida per totes les pàgines. -->
+  <header class="site-header">
+    <a class="brand" href="../index.html" aria-label="Anar a l'inici">
+      <span class="brand-mark">DAM 1</span>
+      <span>Digitalització aplicada</span>
+    </a>
+
+    <button class="menu-button" type="button" aria-expanded="false" aria-controls="main-nav">
+      <span></span><span></span><span></span>
+      <span class="sr-only">Obrir el menú</span>
+    </button>
+
+    <nav class="main-nav" id="main-nav" aria-label="Navegació principal">
+      <a href="../index.html">Inici</a>
+      <a href="../index.html#equip">Equip</a>
+      <div class="nav-dropdown">
+        <button class="dropdown-toggle" type="button" aria-expanded="false">
+          Workshops <span aria-hidden="true">⌄</span>
+        </button>
+        <div class="dropdown-menu">
+          <a href="sistemes-operatius.html"><span>01</span>Sistemes operatius</a>
+          <a href="control-versions.html"><span>02</span>Control de versions</a>
+          <a href="programacio.html"><span>03</span>Programació</a>
+          <a href="base-dades.html"><span>04</span>Bases de dades</a>
+          <a class="active" href="disseny-interficies.html"><span>05</span>Disseny d'interfícies</a>
+          <a href="ia.html"><span>06</span>Intel·ligència artificial</a>
+          <a href="ti-iot.html"><span>07</span>TI / IoT</a>
+          <a href="conclusions.html"><span>08</span>Conclusions</a>
+        </div>
+      </div>
+    </nav>
+  </header>
+
+  <main>
+    <section class="workshop-hero">
+      <div class="breadcrumbs">
+        <a href="../index.html">Inici</a><span>/</span>
+        <a href="../index.html#workshops">Workshops</a><span>/</span>
+        <span>Disseny d'interfícies</span>
+      </div>
+
+      <div class="workshop-title">
+        <div>
+          <p class="eyebrow">Disseny i experiència d'usuari</p>
+          <h1>Disseny d'interfícies</h1>
+        </div>
+        <span class="workshop-index">Workshop 05</span>
+      </div>
+    </section>
+
+    <div class="workshop-layout">
+      <aside class="side-index">
+        <p>Contingut</p>
+        <a href="#resum">Resum</a>
+        <a href="#aprenentatges">Què hem après</a>
+        <a href="#activitats">Activitats</a>
+        <a href="#captures">Captures</a>
+      </aside>
+
+      <!-- Resum i aprenentatges apareixen junts; activitats ocupa tota l'amplada. -->
+      <article class="workshop-content">
+        <section class="content-section" id="resum">
+          <p class="section-label">Resum</p>
+          <h2>De què va tractar el workshop</h2>
+          <p class="lead">Vam analitzar la web de l'Institut Tecnològic de Barcelona des del punt de vista de la usabilitat i l'experiència d'usuari. L'estudi incloïa la primera impressió, el disseny visual, la navegació, el contingut, les funcionalitats, l'accessibilitat i l'arquitectura del lloc.</p>
+        </section>
+
+        <section class="content-section" id="aprenentatges">
+          <p class="section-label">Aprenentatges</p>
+          <h2>Què hem après</h2>
+          <ul class="content-list">
+            <li>Una interfície ha de ser coherent, llegible i fàcil d'entendre des del primer moment.</li>
+            <li>La jerarquia dels menús i dels títols condiciona la rapidesa amb què trobem la informació.</li>
+            <li>El disseny responsiu s'ha de comprovar tant en mòbil com en ordinador.</li>
+            <li>Els wireframes permeten ordenar el contingut abans de construir la interfície definitiva.</li>
+            <li>Una anàlisi DAFO ajuda a separar punts forts, punts febles i oportunitats de millora.</li>
+          </ul>
+        </section>
+
+        <section class="content-section" id="activitats">
+          <p class="section-label">Activitats</p>
+          <h2>Anàlisi de la web</h2>
+          <div class="table-wrap">
+            <table class="content-table">
+              <thead><tr><th>Aspecte analitzat</th><th>Resultat</th></tr></thead>
+              <tbody>
+                <tr>
+                  <td>Primera impressió</td>
+                  <td>La web transmet professionalitat i confiança. Els colors, la tipografia, les fotografies i les notícies creen una imatge moderna i propera. Els estudis apareixen de manera visible, tot i que algunes targetes queden tallades en obrir la versió d'ordinador.</td>
+                </tr>
+                <tr>
+                  <td>Disseny visual</td>
+                  <td>La combinació de blanc i blau és coherent amb la temàtica tecnològica. La tipografia és llegible i les icones són clares. Com a millores, vam detectar espais buits en algunes imatges i petits desajustos d'alineació al menú.</td>
+                </tr>
+                <tr>
+                  <td>Navegació i estructura</td>
+                  <td>El menú superior és fàcil d'entendre, però algunes opcions podrien reagrupar-se. El segon menú resulta redundant, el cercador és limitat i el logo que porta a l'inici desapareix quan es baixa per la pàgina.</td>
+                </tr>
+                <tr>
+                  <td>Contingut</td>
+                  <td>Els textos són clars, les paraules importants es destaquen i la informació dels estudis està ben organitzada. Les notícies i les dades dels cicles donen sensació de contingut actualitzat.</td>
+                </tr>
+                <tr>
+                  <td>Funcionament i dades</td>
+                  <td>La càrrega és ràpida i no vam trobar errors greus. En reduir la finestra, el menú pot superposar-se, i el selector d'idioma sembla desplegable però no funciona. Algunes seccions mostren dades obtingudes d'un origen extern.</td>
+                </tr>
+                <tr>
+                  <td>Accessibilitat</td>
+                  <td>El contrast és correcte, la navegació funciona en mòbil i ordinador i no hi ha anuncis ni finestres emergents invasives. La principal limitació és que el contingut només està disponible en català.</td>
+                </tr>
+                <tr>
+                  <td>Arquitectura</td>
+                  <td>La vam classificar com una web principalment estàtica perquè mostra el mateix contingut a tots els usuaris i les actualitzacions visibles semblen preparades prèviament.</td>
+                </tr>
+                <tr>
+                  <td>DAFO i millores</td>
+                  <td>Els punts forts són la identitat visual, la quantitat d'informació i els canals de contacte. Els punts febles són els menús, el cercador, la redundància i l'idioma. Vam proposar un assistent d'orientació, un espai de projectes d'estudiants, millores SEO i més idiomes.</td>
+                </tr>
+              </tbody>
+            </table>
+          </div>
+
+          <p class="pending-note"><strong>Valoració global:</strong> el millor element és la coherència de la interfície i la bona distribució de la informació. Les millores principals serien simplificar els menús, reforçar el cercador i fer funcionar el canvi d'idioma.</p>
+        </section>
+
+        <!-- GALERIA: substitueix cada placeholder per una etiqueta <img>. -->
+        <section class="content-section" id="captures">
+          <p class="section-label">Contingut gràfic</p>
+          <h2>Captures de les activitats</h2>
+          <p class="capture-intro">
+            Afegiu aquí captures del procés, dels resultats o de les eines utilitzades.
+            Guardeu les imatges a <code>assets/img</code> i canvieu cada placeholder per
+            una etiqueta <code>&lt;img&gt;</code>.
+          </p>
+
+          <div class="capture-grid">
+            <figure class="capture-item">
+              <!-- Substituïu aquest bloc per una imatge ubicada a assets/img/captura-1.png. -->
+              <div class="capture-placeholder"><span>Web analitzada</span></div>
+              <figcaption>Captura de la web de l'ITB i d'algun element analitzat.</figcaption>
+            </figure>
+
+            <figure class="capture-item">
+              <!-- Substituïu aquest bloc per una imatge ubicada a assets/img/captura-2.png. -->
+              <div class="capture-placeholder"><span>Wireframes</span></div>
+              <figcaption>Wireframe de la pàgina principal o d'una secció interior.</figcaption>
+            </figure>
+
+            <figure class="capture-item">
+              <!-- Substituïu aquest bloc per una imatge ubicada a assets/img/captura-3.png. -->
+              <div class="capture-placeholder"><span>Taula DAFO</span></div>
+              <figcaption>Punts forts, punts febles i oportunitats de millora.</figcaption>
+            </figure>
+          </div>
+        </section>
+
+        <nav class="page-navigation" aria-label="Navegació entre workshops">
+          <a href="base-dades.html"><span>Anterior</span><strong>← Bases de dades</strong></a>
+          <a href="ia.html"><span>Següent</span><strong>Intel·ligència artificial →</strong></a>
+        </nav>
+      </article>
+    </div>
+  </main>
+
+  <footer class="site-footer">
+    <p>DAM 1 · Digitalització aplicada</p>
+    <p>Estructura generada amb IA · Contingut elaborat per humans</p>
+  </footer>
+</body>
+</html>

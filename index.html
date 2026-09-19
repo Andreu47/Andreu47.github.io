@@ -1,0 +1,145 @@
+<!doctype html>
+<html lang="ca">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Projecte de DAM 1 sobre digitalització aplicada i els workshops realitzats durant la setmana.">
+  <title>DAM 1 · Digitalització aplicada</title>
+
+  <link rel="icon" type="image/svg+xml" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'%3E%3Crect width='64' height='64' rx='8' fill='%23ffffff'/%3E%3Cpath d='M17 19h14c10 0 16 5 16 13S41 45 31 45H17V19Zm10 7v12h4c5 0 8-2 8-6s-3-6-8-6h-4Z' fill='%233f73a4'/%3E%3C/svg%3E">
+  <link rel="stylesheet" href="assets/css/base.css">
+  <link rel="stylesheet" href="assets/css/navigation.css">
+  <link rel="stylesheet" href="assets/css/home.css">
+  <link rel="stylesheet" href="assets/css/responsive.css">
+  <script src="assets/js/main.js" defer></script>
+</head>
+<body>
+  <!-- Capçalera comuna del web. -->
+  <header class="site-header">
+    <a class="brand" href="index.html" aria-label="Anar a l'inici">
+      <span class="brand-mark">DAM 1</span>
+      <span>Digitalització aplicada</span>
+    </a>
+
+    <button class="menu-button" type="button" aria-expanded="false" aria-controls="main-nav">
+      <span></span><span></span><span></span>
+      <span class="sr-only">Obrir el menú</span>
+    </button>
+
+    <nav class="main-nav" id="main-nav" aria-label="Navegació principal">
+      <a class="active" href="index.html">Inici</a>
+      <a href="#equip">Equip</a>
+      <div class="nav-dropdown">
+        <button class="dropdown-toggle" type="button" aria-expanded="false">
+          Workshops <span aria-hidden="true">⌄</span>
+        </button>
+        <div class="dropdown-menu">
+          <a href="workshops/sistemes-operatius.html"><span>01</span>Sistemes operatius</a>
+          <a href="workshops/control-versions.html"><span>02</span>Control de versions</a>
+          <a href="workshops/programacio.html"><span>03</span>Programació</a>
+          <a href="workshops/base-dades.html"><span>04</span>Bases de dades</a>
+          <a href="workshops/disseny-interficies.html"><span>05</span>Disseny d'interfícies</a>
+          <a href="workshops/ia.html"><span>06</span>Intel·ligència artificial</a>
+          <a href="workshops/ti-iot.html"><span>07</span>TI / IoT</a>
+          <a href="workshops/conclusions.html"><span>08</span>Conclusions</a>
+        </div>
+      </div>
+    </nav>
+  </header>
+
+  <main>
+    <!-- Portada del projecte. -->
+    <section class="hero">
+      <div>
+        <p class="eyebrow">Projecte setmanal · DAM 1</p>
+        <h1>Digitalització aplicada</h1>
+        <p class="hero-text">
+          Recull dels workshops realitzats durant la setmana i dels coneixements
+          que hem adquirit en cadascun.
+        </p>
+        <a class="primary-link" href="#workshops">Veure els workshops</a>
+      </div>
+
+    </section>
+
+    <!-- Equip: cada espai gris es podrà substituir per una fotografia. -->
+    <section class="section" id="equip">
+      <div class="section-heading">
+        <div>
+          <p class="eyebrow">El nostre equip</p>
+          <h2>Quatre alumnes, un projecte comú</h2>
+        </div>
+      </div>
+
+      <div class="team-list">
+        <article class="team-member">
+          <div class="member-photo"><span>Foto</span></div>
+          <span class="team-number">01</span>
+          <h3>Andreu Carbonell</h3>
+          <p>Presentació personal pendent de completar.</p>
+        </article>
+        <article class="team-member">
+          <div class="member-photo"><span>Foto</span></div>
+          <span class="team-number">02</span>
+          <h3>Joan Mercé</h3>
+          <p>Presentació personal pendent de completar.</p>
+        </article>
+        <article class="team-member">
+          <div class="member-photo"><span>Foto</span></div>
+          <span class="team-number">03</span>
+          <h3>Josep Maria</h3>
+          <p>Presentació personal pendent de completar.</p>
+        </article>
+        <article class="team-member">
+          <div class="member-photo"><span>Foto</span></div>
+          <span class="team-number">04</span>
+          <h3>Prathjob</h3>
+          <p>Presentació personal pendent de completar.</p>
+        </article>
+      </div>
+    </section>
+
+    <!-- Índex dels workshops. -->
+    <section class="section" id="workshops">
+      <div class="section-heading">
+        <div>
+          <p class="eyebrow">Contingut</p>
+          <h2>Workshops de la setmana</h2>
+        </div>
+      </div>
+
+      <div class="workshop-list">
+        <a href="workshops/sistemes-operatius.html">
+          <span class="number">01</span><h3>Sistemes operatius</h3><p>Linux i virtualització</p><span class="arrow">→</span>
+        </a>
+        <a href="workshops/control-versions.html">
+          <span class="number">02</span><h3>Control de versions</h3><p>Git i GitHub</p><span class="arrow">→</span>
+        </a>
+        <a href="workshops/programacio.html">
+          <span class="number">03</span><h3>Programació</h3><p>Desenvolupament de programari</p><span class="arrow">→</span>
+        </a>
+        <a href="workshops/base-dades.html">
+          <span class="number">04</span><h3>Bases de dades</h3><p>PostgreSQL i SQL</p><span class="arrow">→</span>
+        </a>
+        <a href="workshops/disseny-interficies.html">
+          <span class="number">05</span><h3>Disseny d'interfícies</h3><p>Experiència d'usuari</p><span class="arrow">→</span>
+        </a>
+        <a href="workshops/ia.html">
+          <span class="number">06</span><h3>Intel·ligència artificial</h3><p>Eines i aplicacions</p><span class="arrow">→</span>
+        </a>
+        <a href="workshops/ti-iot.html">
+          <span class="number">07</span><h3>TI / IoT</h3><p>Sistemes connectats</p><span class="arrow">→</span>
+        </a>
+        <a href="workshops/conclusions.html">
+          <span class="number">08</span><h3>Conclusions</h3><p>Valoració del projecte</p><span class="arrow">→</span>
+        </a>
+      </div>
+    </section>
+  </main>
+
+  <footer class="site-footer">
+    <p>DAM 1 · Digitalització aplicada</p>
+    <p>Estructura generada amb IA · Contingut elaborat per humans</p>
+  </footer>
+</body>
+</html>
