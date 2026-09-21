@@ -116,3 +116,25 @@
   font-size: .9rem;
 }
 
+.member-photo {
+  position: relative;
+  aspect-ratio: 1 / 1;
+  overflow: hidden;
+  margin-bottom: 18px;
+  background: var(--surface-soft);
+  border: 1px solid var(--line);
+}
+
+.member-photo img {
+  position: absolute;
+  inset: 0;
+  display: block;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  object-position: center 70%;
+}
+
+.team-member:nth-child(4) .member-photo img {
+  object-position: center 60%;
+}
